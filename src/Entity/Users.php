@@ -2,12 +2,14 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\UsersRepository")
  */
-class User
+class Users
 {
     /**
      * @ORM\Id()
@@ -20,6 +22,7 @@ class User
      * @ORM\Column(type="string", length=255)
      */
     private $name;
+
 
     public function getId(): ?int
     {
@@ -37,4 +40,5 @@ class User
 
         return $this;
     }
+
 }
