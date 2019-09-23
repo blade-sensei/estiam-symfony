@@ -116,6 +116,10 @@ class Questions
         return $this;
     }
 
+    public function __toString() {
+        return strval($this->id);
+    }
+
     
     
 }
